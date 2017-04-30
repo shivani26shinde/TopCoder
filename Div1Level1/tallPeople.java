@@ -11,9 +11,12 @@ public class TallPeople{
         	ArrayList<Integer> temp = new ArrayList<>();
             String s = people[i];
             for(int j=0;j<s.length();j++){
-            	if(s.charAt(j) != ' '){
-                	temp.add(Character.getNumericValue(s.charAt(j)));
+                StringBuilder sb = new StringBuilder();
+            	while(j<s.length() && s.charAt(j) != ' '){
+                    sb.append(s.charAt(j));
+                    j++;
                 }
+                temp.add(Integer.parseInt(sb.toString()));
             }
             list.add(temp);
         }
