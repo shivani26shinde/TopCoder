@@ -11,10 +11,10 @@ class Ideone
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
-		ArrayList<String> women = new ArrayList<String>(Arrays.asList("Constance", "Alice", "Bertha", "Delilah", "Emily"));
-		ArrayList<String> men = new ArrayList<String>(Arrays.asList("Ed", "Duff", "Chip", "Abe", "Biff"));
-		ArrayList<String> womenP = new ArrayList<String>(Arrays.asList("baabaa", "ababab", "aaabbb", "bababa", "baabba"));
-		ArrayList<String> menP = new ArrayList<String>(Arrays.asList("aabaab", "babbab", "bbbaaa", "abbbba", "abaaba"));
+		ArrayList<String> women = new ArrayList<String>(Arrays.asList("anne", "Zoe"));
+		ArrayList<String> men = new ArrayList<String>(Arrays.asList("bob", "chuck"));
+		ArrayList<String> womenP = new ArrayList<String>(Arrays.asList("a", "a"));
+		ArrayList<String> menP = new ArrayList<String>(Arrays.asList("a", "a"));
 		
 		HashMap<String, String> Wo = new HashMap<>();
 		HashMap<String, String> Men = new HashMap<>();
@@ -52,6 +52,7 @@ class Ideone
 			match.put(women.get(w), men.get(m));
 			Wo.remove(women.get(w));
 			Men.remove(men.get(m));
+			men.remove(m);
 		}
 		for(String key : match.keySet()){
 			System.out.println(key+"   "+match.get(key));
